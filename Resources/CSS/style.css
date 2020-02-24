@@ -1,0 +1,484 @@
+/*
+Brownish/Orangish color - #FFBD4A
+
+
+*/
+
+
+
+
+/* ------------------------ */
+/* BASIC SETUP */
+/* ------------------------ */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+html,
+body {
+    background-color: #fff;
+    color: #555;
+    font-family: "Nunito", "Arial", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.clearfix {zoom: 1}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+
+/* ------------------------ */
+/* REUSABLE COMPONENTS */
+/* ------------------------ */
+
+.visual-test {
+    background-color: #000;
+}
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.box {
+    padding: 1%;
+}
+/*-----HEADINGS-----*/
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 240%;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+}
+
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-size: 110%;
+    margin-top: 15px;
+}
+
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #FFBD4A;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+
+
+/*-----PARAGRAPHS-----*/
+.long-copy {
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+}
+
+
+
+
+/*-----BUTTONS-----*/
+
+.btn:link,
+.btn:visited,
+input[type=submit] {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300px;
+    text-decoration: none;
+    border-radius: 200px;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit] {
+    background-color: #e39000;
+    border: 1px solid #e39000;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #FFBD4A;
+    color: #FFBD4A;
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    background-color: #b07000;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid #b07000;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #b07000;
+    color: #fff;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.horizontal-list li {
+    display: inline-block;
+    text-align: center;
+}
+
+
+/* -------------------------------------------- */
+/* NAVIGATION */
+/* -------------------------------------------- */
+
+/* Main navi */
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+    margin-right: 0px;
+}
+
+.main-nav li:last-child {
+    color: #fff
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom 0.2s;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #FFBD4A;
+}
+
+nav {
+    background: #105FB3;
+    max-width: 100%;
+    /*opacity: .9;*/
+}
+
+
+
+/* Mobile navi */
+.mobile-nav-icon,
+.mobile-phone-icon,
+.mobile-location-icon {
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-nav-icon i,
+.mobile-phone-icon i, 
+.mobile-location-icon i {
+    font-size: 200%;
+    color: #fff;
+}
+
+/* Sticky navi */
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(16, 95, 179, 0.98);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.21);
+    z-index: 9999;
+}
+
+.sticky .main-nav { margin-top: 20px; }
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    padding: 14px 0;
+}
+
+.sticky .logo-white {
+    height: 50px;
+    width: auto;
+    float: left;
+    margin: 5px 0;
+}
+
+
+/* ------------------------ */
+/* HEADER */
+/* ------------------------ */
+
+header {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(IMGs/Fence-with-green-min.jpeg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(IMGs/Fence-with-green.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    /*background-position: 0 130px;*/
+    /*background-repeat: no-repeat;*/
+    height: 100vh; /* Why do this use the vh unit? */
+}
+
+.fence-text-box {
+    color: #fff;
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+.logo-white {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin: 15px 0;
+}
+
+/* ------------------------ */
+/* OUR SERVICES */
+/* ------------------------ */
+
+.gallery {
+    margin: 10px 0;
+}
+
+.gallery img {
+    border-radius: 2%;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+
+.gallery .hide-img {
+    display: none;
+}
+
+.gallery img:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+#additional-services { text-align: center }
+
+/* ------------------------ */
+/* OUR PROMISE AND TESTIMONIALS */
+/* ------------------------ */
+
+.section-promise-testimonials {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(IMGs/single-mirror-min.jpeg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(IMGs/single-mirror.jpeg);
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed;
+}
+
+blockquote {
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+    margin-top: 80px;
+}
+
+cite {
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+}
+
+blockquote:before {
+    content: "\201C";
+    font-size: 500%;
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+/* ------------------------ */
+/* CONTACT US */
+/* ------------------------ */
+
+iframe {
+    border-radius: 5%;
+    border: 0px;
+    height: 450px;
+    /*width: 450px;*/
+    width: 100%;
+    margin: 0 auto;
+}
+
+.section-contact-us {
+    background-color: #f4f4f4;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.contact-form {
+    width: 100%;
+    height: 450px;
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #CCC;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;
+}
+
+
+*:focus {outline: none;}
+
+
+/* ------------------------ */
+/* FOOTER */
+/* ------------------------ */
+
+
+footer {
+    background-color: #333;
+    padding: 50px;
+    font-size: 80%;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social-links {
+    list-style: none;
+    float: right;
+    font-size: 160%;
+}
+
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+    margin: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration: none;
+    border: 0;
+    color: #888;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color: #ddd;
+}
+
+.ion-social-facebook,
+.ion-social-twitter,
+.ion-social-googleplus,
+.ion-social-instragram {
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.ion-social-facebook:hover {
+    color: #3b5998;
+}
+
+.ion-social-twitter:hover {
+    color: #55acee;
+}
+
+.ion-social-googleplus:hover {
+    color: #dd4b39;
+}
+
+
+
+footer p {
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
+}
